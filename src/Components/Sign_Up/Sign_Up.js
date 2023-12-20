@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
 
 const Sign_Up = () => {
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -15,8 +14,7 @@ const Sign_Up = () => {
     const navigate = useNavigate();
 
     const register = async (e) => {
-
-        e.preventDefault();
+         e.preventDefault();
 
         // API Call
 
@@ -57,11 +55,9 @@ const Sign_Up = () => {
         } else {
 
             if (json.errors) {
-
                 for (const error of json.errors) {
                     setShowerr(error.msg);
                 }
-
             } else {
                 setShowerr(json.error);
             }
