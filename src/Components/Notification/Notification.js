@@ -38,12 +38,32 @@ const Notification = ({ children }) => {
               <p className="appointment-card__message">
                 <strong>Doctor:</strong> {doctorData?.name}
               </p>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+
+            <p className="appointment-card__message">
+                                <strong>Speciality:</strong> {doctorData.speciality}
+                            </p>
+                            {appointmentData.map(appointment => (
+                                <div key={appointment.id}>
+                                    <p className="appointment-card__message">
+                                        <strong>Name:</strong> {appointment.name}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Phone Number:</strong> {appointment.phoneNumber}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Date of Appointment:</strong> {appointment.date}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Time Slot:</strong> {appointment.time}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </>
+            )}
+        </div>
+    );
 };
 
 export default Notification;
