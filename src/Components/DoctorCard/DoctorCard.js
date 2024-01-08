@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import './DoctorCard.css';
-import 'reactjs-popup/dist/index.css';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 import { v4 as uuidv4 } from 'uuid';
 import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 
 const DoctorCard = ({ name, speciality, experience, clinic, ratings, profilePic }) => {
     const [showModal, setShowModal] = useState(false);
