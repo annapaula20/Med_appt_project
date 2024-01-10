@@ -68,7 +68,7 @@ const Navbar = () => {
       </div>
       <ul className={click ? 'nav__links active' : 'nav__links'}>
         <li className="link">
-          <Link to="/">Home</Link>
+          <Link to="/Landing_Page">Home</Link>
         </li>
         <li className="link">
           <Link to="/search/doctors">Appointments</Link>

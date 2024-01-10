@@ -21,7 +21,7 @@ function App() {
           <Notification>
             <Navbar />
               <Routes>
-                        <Route path="" element={<Landing_Page />} />
+                        <Route path="/Landing_Page" element={<Landing_Page />} />
                         <Route path="/Sign_Up" element={<Sign_Up />} />
                         <Route path="/Login" element={<Login />} />
                         <Route path="/instant-consultation" element={<InstantConsultation />} />
